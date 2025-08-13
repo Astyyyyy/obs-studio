@@ -1147,10 +1147,10 @@ static obs_properties_t *vaapi_properties_internal(enum codec_type codec)
 	obs_property_set_modified_callback(list, rate_control_modified);
 
 	obs_property_t *p;
-	p = obs_properties_add_int(props, "bitrate", obs_module_text("Bitrate"), 0, 300000, 50);
+	p = obs_properties_add_int(props, "bitrate", obs_module_text("Bitrate"), 0, 1000000, 50);
 	obs_property_int_set_suffix(p, " Kbps");
 
-	p = obs_properties_add_int(props, "maxrate", obs_module_text("MaxBitrate"), 0, 300000, 50);
+	p = obs_properties_add_int(props, "maxrate", obs_module_text("MaxBitrate"), 0, 1000000, 50);
 	obs_property_int_set_suffix(p, " Kbps");
 
 	obs_properties_add_int(props, "qp", "QP", 0, 51, 1);
